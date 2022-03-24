@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Remotes -->
+ <remote name="pixel"
+            fetch="ssh://git@github.com/svlog"
+            revision="sc-2"/>
+
+  <remote  name="github"
+           fetch="https://github.com/"/>
+
+    <!-- Build -->
+  <project path="build/make" name="android_build" groups="pdk" remote="pixel" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="android_build_soong" groups="pdk,tradefed" remote="pixel" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+   <!-- general repos -->
+  <project path="art" name="android_art" remote="pixel" />
+  <project path="bionic" name="android_bionic" remote="pixel" />
+
+  <!-- device repos -->
+  <project path="device/google/sunfish" name="device_google_sunfish" remote="pixel" />
+  <project path="device/google/bonito" name="device_google_bonito" remote="pixel" />
+  <project path="device/google/redbull" name="device_google_redbull" remote="pixel" />
+  <project path="device/google/redfin" name="device_google_redfin" remote="pixel" />
+
+
+  <!-- frameworks repos -->
+  <project path="frameworks/base" name="android_frameworks_base" remote="pixel"/>
+  <project path="frameworks/native" name="android_frameworks_nativenative" remote="pixel"/>
+
+  <!-- system repos -->
+  <project path="system/core" name="android_system_core" remote="pixel"/>
+
+  <!-- packages repos -->
+  <project path="packages/apps/PixelSettings" name="android_packages_apps_PixelSettings" remote="pixel" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pixel" />
+  <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="pixel" />
+  <project path="packages/providers/DownloadProvider" name="android_packages_providers_DownloadProvider" remote="pixel" />
+  <project path="packages/modules/Permission" name="android_packages_modules_Permission" remote="pixel" />
+
+  <!-- vendor repos -->
+  <project path="vendor/pixel/" name="vendor_pixel" remote="pixel"/>
+  <project path="vendor/google_devices/sunfish/" name="vendor_google_devices_sunfish" remote="pixel"/>
+  <project path="vendor/google_devices/" name="vendor_google_devices" remote="pixel"/> <!-- ToDo: 4a merge with 3a/5/a -->
+
+</manifest>
