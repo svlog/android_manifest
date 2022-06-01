@@ -30,17 +30,16 @@
 
   <!-- device repos -->
   <project path="device/google/sunfish" name="device_google_sunfish" remote="pixel" />
-  <project path="device/google/bonito" name="device_google_bonito" remote="pixel" />
-  <project path="device/google/redbull" name="device_google_redbull" remote="pixel" />
-  <project path="device/google/redfin" name="device_google_redfin" remote="pixel" />
+  <project path="device/google/bonito" name="device_google_bonito" remote="pixel" revision="sc" />
+  <project path="device/google/redbull" name="device_google_redbull" remote="pixel" revision="sc" />
+  <project path="device/google/redfin" name="device_google_redfin" remote="pixel" revision="sc" />
 
 
   <!-- frameworks repos -->
   <project path="frameworks/base" name="android_frameworks_base" remote="pixel"/>
-  <project path="frameworks/native" name="android_frameworks_nativenative" remote="pixel"/>
+  <project path="frameworks/native" name="android_frameworks_native" remote="pixel"/>
 
   <!-- system repos -->
-  <project path="system/core" name="android_system_core" remote="pixel"/>
 
   <!-- packages repos -->
   <project path="packages/apps/PixelSettings" name="android_packages_apps_PixelSettings" remote="pixel" />
@@ -51,6 +50,6 @@
 
   <!-- vendor repos -->
   <project path="vendor/pixel/" name="vendor_pixel" remote="pixel"/>
-  <project path="vendor/google_devices/sunfish/" name="vendor_google_devices_sunfish" remote="pixel"/>
+  <project path="vendor/google_devices/sunfish/" name="vendor_google_devices_sunfish" remote="pixel" />
 
 </manifest>
