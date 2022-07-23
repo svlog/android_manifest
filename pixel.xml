@@ -50,6 +50,6 @@
 
   <!-- vendor repos -->
   <project path="vendor/pixel/" name="vendor_pixel" remote="pixel"/>
-  <project path="vendor/google_devices/sunfish/" name="vendor_google_devices_sunfish" remote="pixel" />
+  <project path="vendor/google_devices/" name="vendor_google_devices" remote="pixel" />
 
 </manifest>
