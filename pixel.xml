@@ -30,9 +30,9 @@
 
   <!-- device repos -->
   <project path="device/google/sunfish" name="device_google_sunfish" remote="pixel" />
-  <project path="device/google/bonito" name="device_google_bonito" remote="pixel" revision="sc" />
-  <project path="device/google/redbull" name="device_google_redbull" remote="pixel" revision="sc" />
-  <project path="device/google/redfin" name="device_google_redfin" remote="pixel" revision="sc" />
+  <project path="device/google/bonito" name="device_google_bonito" remote="pixel" />
+  <project path="device/google/gs101" name="device_google_gs101" remote="pixel" />
+  <project path="device/google/raviole" name="device_google_raviole" remote="pixel" />
 
 
   <!-- frameworks repos -->
