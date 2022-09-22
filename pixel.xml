@@ -4,7 +4,7 @@
   <!-- Remotes -->
  <remote name="pixel"
             fetch="ssh://git@github.com/svlog"
-            revision="sc-2"/>
+            revision="tm"/>
 
   <remote  name="github"
            fetch="https://github.com/"/>
@@ -27,6 +27,10 @@
   <remove-project name="platform/build" />
   <remove-project name="platform/build/soong" />
 
+  <!-- device repos -->
+  <project path="device_google_sunfish" name="device_google_sunfish" remote="pixel"/>
+  <remove-project name="device/google/sunfish"/>
+
   <!-- frameworks repos -->
   <project path="frameworks/base" name="android_frameworks_base" remote="pixel"/>
   <remove-project name="platform/frameworks/base" />
@@ -37,13 +41,18 @@
 
    <!-- packages repos -->
   <project path="packages/apps/PixelSettings" name="android_packages_apps_PixelSettings" remote="pixel" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="pixel" />
+  <remove-project name="platform/packages/apps/Settings" />
 
   <!-- System -->
   <project path="system/sepolicy" name="android_system_sepolicy" remote="pixel" />
   <remove-project name="system/sepolicy" />
 
   <!-- vendor repos -->
+  <project path="vendor/google_devices/" name="vendor_google_devices" remote="pixel"/>
   <project path="vendor/pixel/" name="vendor_pixel" remote="pixel"/>
+  <project path="vendor/pixel-framework/" name="vendor_pixel-framework" remote="pixel"/>
+
 
   <!-- Remove -->
   <project path="packages/apps/Browser2"/>
