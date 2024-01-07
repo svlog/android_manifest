@@ -4,7 +4,7 @@
   <!-- Remotes -->
  <remote name="pixel"
             fetch="ssh://git@github.com/svlog"
-            revision="tm"/>
+            revision="tm-n"/>
 
   <remote  name="github"
            fetch="https://github.com/"/>
